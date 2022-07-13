@@ -25,5 +25,5 @@ func (p person) print(){
 	fmt.Println(p)
 }
 func (pointerToPerson *person) updateName(newFName string){
-	*&pointerToPerson.firstname = newFName
+	(*pointerToPerson).firstname = newFName
 }
